@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="BootstrapTabs">
+<head>
+    <title></title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css"/>
+    
+    <!--Bower Components, Angular Dependencies --> 
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+    <style type="text/css">
+        form.tab-form-demo .tab-pane {
+        margin: 20px 20px;
+            }
+    </style>
+</head>
+    
+<body>
+
+<div ng-controller="TabsDemoCtrl">
+  <uib-tabset>
+    <uib-tab heading="Static title">
+        <ul class="list-group">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+    </uib-tab>
+    <uib-tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active">
+      <ul class="list-group">
+            <li class="list-group-item">Do a deer</li>
+            <li class="list-group-item">Re a note to follow so</li>
+            <li class="list-group-item">Mi a name I call myself</li>
+            <li class="list-group-item">Fa a long long way to run</li>
+            <li class="list-group-item">So a needle pulling thread</li>
+        </ul>
+    </uib-tab>
+  </uib-tabset>
+
+</div>
+    <script src="js/app.js"></script>
+    </body>
+</html>
